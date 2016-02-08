@@ -339,7 +339,8 @@ static gboolean setup_huawei(struct modem_info *modem)
 				g_strcmp0(info->interface, "255/1/51") == 0) {
 			diag = info->devnode;
 		} else if (g_strcmp0(info->interface, "255/1/8") == 0 ||
-				g_strcmp0(info->interface, "255/1/56") == 0) {
+				g_strcmp0(info->interface, "255/1/56") == 0 ||
+				g_strcmp0(info->interface, "255/2/22") == 0) {
 			net = info->devnode;
 		} else if (g_strcmp0(info->interface, "255/1/9") == 0 ||
 				g_strcmp0(info->interface, "255/1/57") == 0) {
