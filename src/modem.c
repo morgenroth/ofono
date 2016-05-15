@@ -293,6 +293,9 @@ unsigned int __ofono_modem_add_atom_watch(struct ofono_modem *modem,
 	GSList *l;
 	struct ofono_atom *atom;
 
+	if (!modem->atom_watches)
+		return 0;
+
 	if (notify == NULL)
 		return 0;
 
