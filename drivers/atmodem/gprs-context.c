@@ -210,7 +210,8 @@ static void at_cgdcont_cb(gboolean ok, GAtResult *result, gpointer user_data)
 		return;
 	}
 
-	if (gcd->vendor == OFONO_VENDOR_SIMCOM_SIM900)
+	if (gcd->vendor == OFONO_VENDOR_SIMCOM_SIM900 ||
+			gcd->vendor == OFONO_VENDOR_HUAWEI)
 		sprintf(buf, "ATD*99***%u#", gcd->active_context);
 	else
 		sprintf(buf, "AT+CGDATA=\"PPP\",%u", gcd->active_context);
